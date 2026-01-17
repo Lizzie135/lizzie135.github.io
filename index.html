@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+  
 <body>
 
   <!-- HEADER -->
   <header>
-    <img src="images/headshot_elizabeth.jpg" alt="Elizabeth-Lynda Nartey headshot">
+    <img src="images/headshot_elizabeth.jpg" alt="Elizabeth-Lynda Nartey headshot" class="fade-up">
     <h1>Elizabeth-Lynda Nartey</h1>
     <p>Quantitative Analyst | Data Science & Business Analytics | Machine Learning</p>
     <p>Washington, DC</p>
@@ -24,7 +25,7 @@
   </header>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="fade-up">
     <h2>About Me</h2>
     <p>
       I am a quantitative analyst and data science graduate student with strong
@@ -49,7 +50,7 @@
   </section>
 
 <!-- WHY ME -->
-  <section id="why-me">
+  <section id="why-me" class="fade-up">
   <h2>Why Hire Me</h2>
   <p>
     I bring more than just technical skill to a team — I bring reliability, clarity, and positive momentum.
@@ -80,7 +81,7 @@
 
 
   <!-- EDUCATION -->
-  <section id="education">
+  <section id="education" class="fade-up">
     <h2>Education</h2>
 
     <div class="education-item">
@@ -103,7 +104,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills">
+  <section id="skills" class="fade-up">
     <h2>Technical Skills</h2>
     <ul>
       <li><strong>Programming:</strong> Python (Pandas, NumPy, Scikit-learn), R, SQL, C++, SAS</li>
@@ -115,7 +116,7 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
+  <section id="projects" class="fade-up">
     <h2>Selected Projects</h2>
 
     <div class="project">
@@ -159,23 +160,32 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>SAS Certified Specialist: Machine Learning Pipelines</li>
-      <li>SAS Certified Specialist: Visual Business Analytics</li>
-      <li>SAS Certified Specialist: Modeling Using SAS Visual Statistics</li>
-      <li>SAS Certified Associate: Programming Fundamentals</li>
-      <li>Advanced Google Analytics</li>
-      <li>Huawei 5G Signaling Expert</li>
-      <li>Girls Are ELITE Programming Certification</li>
-    </ul>
-  </section>
+ <section id="certifications" class="fade-up">
+  <h2>Certifications</h2>
+  <ul>
+    <li><a href="SAS_ML_Pipelines.pdf" target="_blank">SAS Certified Specialist: Machine Learning Pipelines</a></li>
+    <li><a href="SAS_Visual_Business_Analytics.pdf" target="_blank">SAS Certified Specialist: Visual Business Analytics</a></li>
+    <li><a href="SAS_Visual_Statistics.pdf" target="_blank">SAS Certified Specialist: Modeling Using SAS Visual Statistics</a></li>
+    <li><a href="SAS_Programming_Fundamentals.pdf" target="_blank">SAS Certified Associate: Programming Fundamentals</a></li>
+    <li>Advanced Google Analytics</li>
+    <li><a href="Huawei_5G_Cert.pdf" target="_blank">Huawei 5G Signaling Expert</a></li>
+    <li>Girls Are ELITE Programming Certification</li>
+  </ul>
+</section>
+
 
   <!-- EXPERIENCE -->
-  <section id="experience">
-    <h2>Leadership & Experience</h2>
-
+  <section id="experience" class="fade-up">
+    <h2>Leadership & Work Experience</h2>
+    <p>
+      <strong>Graduate Trainee</strong><br>
+      MTN Ghana (2022–2025)
+    </p>
+    <ul>
+      <li>Assisted in optimizing 5G network architecture and signal processing efficiency.</li>
+      <li>Developed Python-based automation and optimization tools.</li>
+    </ul>
+    
     <p>
       <strong>Vice President, CAS Graduate Students</strong><br>
       American University (Fall 2025–2026)
@@ -185,20 +195,11 @@
       <strong>Social Media Manager</strong><br>
       American Statistical Society, AU Chapter (Fall 2025–2026)
     </p>
-
-    <p>
-      <strong>Graduate Trainee</strong><br>
-      MTN Ghana (2022–2025)
-    </p>
-    <ul>
-      <li>Assisted in optimizing 5G network architecture and signal processing efficiency.</li>
-      <li>Developed Python-based automation and optimization tools.</li>
-    </ul>
   </section>
 
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials">
+  <section id="testimonials" class="fade-up" >
   <h2>What People Say</h2>
 
   <div class="testimonials-container">
@@ -267,6 +268,27 @@
     <p>Eligible to work in the U.S. (OPT/CPT valid through December 2028)</p>
     <p>© 2026 Elizabeth-Lynda Nartey</p>
   </footer>
+  
+<script>
+  const faders = document.querySelectorAll('.fade-up');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 </body>
 </html>
