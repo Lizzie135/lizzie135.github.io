@@ -26,8 +26,8 @@ header {
 }
 
 header img {
-  width: 200px;      /* bigger */
-  height: 200px;     /* bigger */
+  width: 250px;      /* bigger */
+  height: 250px;     /* bigger */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
