@@ -71,6 +71,33 @@ h2 {
   letter-spacing: 1px;
 }
 
+/* === Why Hire Me Highlight Panel === */
+#why-me {
+  background: linear-gradient(135deg, #e0f7f4, #d0f0eb);
+  border-left: 6px solid #1f7a6d; /* accent bar on the left */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin: 60px auto;
+}
+
+#why-me h2 {
+  color: #14594f;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+#why-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#why-me strong {
+  color: #1f7a6d;
+}
+
+
 /* === Scroll Fade-Up Animation === */
 .fade-up {
   opacity: 0;
